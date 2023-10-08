@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block main-content %}
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3>Student Registration</h3>
+            <hr>
+            <form action="" method="POST" novalidate>
+                {% csrf_token %}
+                {% for fm in form %}
+                {{fm.label_tag}}{{fm}}{{fm.errors|striptags}} <br><br>
+                {% endfor %}
+                <input type="submit" value="Submit" class="btn">
+                <a href="{% url 'login' %}" class="btn">Login</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

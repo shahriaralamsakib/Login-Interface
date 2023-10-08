@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block main-content %}
+<section class="my-5">
+    <div class="AI">
+      <h2 class="text-center">Login Interface Project</h2>
+      <p align="justify"  class="text-center">This is a basic django login interface project</p>
+      <a href="{% url 'login' %}" class="btn">Login</a>
+      <a href="{% url 'registration' %}" class="btn">Registration</a>
+    </div>
+</section>
+
+{% endblock main-content %}
